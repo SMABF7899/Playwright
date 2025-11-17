@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
     "module": "commonjs",
+    "moduleResolution": "node",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@pom/*": ["pom/*"],
+      "@fixtures/*": ["fixtures/*"],
+      "@common/*": ["common/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["**/*.ts"]
 }
